@@ -53,11 +53,11 @@ function calculateBMI() {
         let bmi = 703 * (weight / (height * height)).toFixed(2);
   
         // Dividing as per the bmi conditions
-        if (bmi < 18.6) result.innerHTML = "Under Weight : " + bmi;
+        if (bmi < 18.6) result.innerHTML = "Under Weight : " + bmi + " lbs/(in)2";
   
         else if (bmi >= 18.6 && bmi < 24.9) 
-            result.innerHTML = "Normal : " + bmi;
+            result.innerHTML = "Normal : " + bmi + " lbs/(in)2";
   
-        else result.innerHTML = "Over Weight : " + bmi;
+        else result.innerHTML = "Over Weight : " + bmi + " lbs/(in)2";
     }
 }
