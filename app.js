@@ -1,21 +1,48 @@
+//  Function for conversions
+const feetInput = document.getElementById('feet')
+const inchesInput = document.getElementById('inches')
+ 
+const feet2inches = 12;
+const inches2feet = 1. / feet2inches;
+ 
+feetInput.addEventListener('input', () => {
+   //if the value is empty or null
+   if(!feetInput.value) {
+     inchesInput.value = '';
+     return;
+   };
+   const convertedValue = feetInput.value * feet2inches;
+   inchesInput.value = Math.round(convertedValue);
+ })
+ 
+ inchesInput.addEventListener('input', () => {
+   //if the value is empty or null
+   if(!inchesInput.value) {
+     feetInput.value = '';
+     return;
+   };
+   const convertedValue = inchesInput.value * inches2feet;
+   feetInput.value = Math.round(convertedValue);
+})
+
+
+function kiloweightConvert(value) {
+    document.getElementById("Pounds").innerHTML=value*2.2046;
+}
+
+
+
 window.onload = () => {
     let button = document.querySelector("#btn");
   
    
     button.addEventListener("click", calculateBMI);
 };
- // Function for conversions
-function feetConvert(value) {
-    document.getElementById("height").innerHTML=value*12;
 
-} 
 
-function kiloweightConvert(value) {
-    document.getElementById("weight").innerHTML=value*2.2046;
 
-}  
 
- // Function for calculating BMI
+// Function for calculating BMI
 function calculateBMI() {
     let height = parseInt(document
             .querySelector("#height").value);
