@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="left">
+    <div class="doctor">
+        
+    </div>
+    <div class="logo">
+        
+    </div>
+    <h2>TOP UNIVERSE BMI CALCULATOR </h2>
+    </div>
+    <div class="right">
+        <div class="bigform">
+            <form action="#">
+                <div class="form-element">
+                <label for="Height (Feet)">Height (Feet) </label>
+                <input type="number" step="0.01" min="1" max="9"  oninput=
+                "feetConvert(this.value)"
+                     onchange="feetConvert(this.value)"> 
+                     <p>Inches: <span id="height"></span></p>
+                     <br>
+            </div>
+            <div class="form-element">
+                <label for="Height (Inches)">Height (Inches)</label>
+                <input type="number" id="height" step="0.01" min="1" max="108"> <br>
+            </div>
+            <div class="form-element">
+                <label for="Weight (Kg.)">Weight (Kg.)</label>
+                <input type="number" step="0.01" min="1" max="635" oninput=
+                "kiloweightConvert(this.value)"
+                     onchange="kiloweightConvert(this.value)">
+                     <p>Pounds: <span id="weight"></span></p>
+                     <br>
+            </div>
+            <div class="form-element">
+                <label for="Gender">Gender</label>
+                <select name="" id="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br>
+            </div>
+            <div class="form-element">
+                <label for="Age">Age</label>
+                <input type="number" id="number" min="1" max="120"> <br>
+            </div>
+                <h3 id="result">BMI RESULT </h3>
+                <button type="submit" id="btn">Calculate BMI</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
