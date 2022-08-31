@@ -10,19 +10,19 @@ body {
     margin: 0;
     display: flex;
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
 }
 .left {
-    background-image: url(/Big.JPG);
 	background-size: cover;
 	background-position: center center;
-	padding: 0 40px 40px;
+	padding: 0px;
     height: auto;
 	width: 47%;
 }
 .logo {
-    margin: 30px 0;
-    background-image: url(/dp.jpg);
+    position:absolute;
+    margin: 30px;
+    margin-right: 10px;
     background-size: cover;
     border-radius:50% 50% 50% 50%;
     width:60px;
@@ -36,7 +36,7 @@ h2 {
     width: 424px;
     height: 24px;
     left: 40px;
-    top: 600px;
+    top: 670px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
