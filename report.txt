@@ -1,0 +1,4 @@
+Well done. The JS code is nice. Your use of event listeners is great.
+Create a better folder structure for your image, css and js assets.
+
+Add proper comments to your JS code next time.
