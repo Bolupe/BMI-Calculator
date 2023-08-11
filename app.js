@@ -1,5 +1,5 @@
-//  Function for conversions
-//Feet 2 Inches
+//  Function for conversion from  feet to inches
+
 const feetInput = document.getElementById('feet')
 const inchesInput = document.getElementById('inches')
  
@@ -7,7 +7,6 @@ const feet2inches = 12;
 const inches2feet = 1. / feet2inches;
  
 feetInput.addEventListener('input', () => {
-   //if the value is empty or null
    if(!feetInput.value) {
      inchesInput.value = '';
      return;
@@ -17,7 +16,6 @@ feetInput.addEventListener('input', () => {
  })
  
  inchesInput.addEventListener('input', () => {
-   //if the value is empty or null
    if(!inchesInput.value) {
      feetInput.value = '';
      return;
@@ -40,24 +38,19 @@ function calculateBMI() {
     let weight = weightOld*2.2046;
     let result = document.querySelector("#result");
   
-    // Checking the user providing a proper value or not
+    // Catching error
     if (height === "" || isNaN(height)) 
         result.innerHTML = "Provide a valid Height!";
   
     else if (weight === "" || isNaN(weight)) 
         result.innerHTML = "Provide a valid Weight!";
   
-    // If both input is valid, calculate the bmi
+    // If both input is valid, calculate the BMI
     else {
-        // Fixing upto 2 decimal places
         let bmi = 703 * (weight / (height * height)).toFixed(2);
-  
-        // Dividing as per the bmi conditions
         if (bmi < 18.6) result.innerHTML = "Under Weight : " + bmi + " lbs/(in)2";
-  
         else if (bmi >= 18.6 && bmi < 24.9) 
             result.innerHTML = "Normal : " + bmi + " lbs/(in)2";
-  
         else result.innerHTML = "Over Weight : " + bmi + " lbs/(in)2";
     }
 }
